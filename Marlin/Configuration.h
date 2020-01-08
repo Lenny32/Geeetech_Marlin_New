@@ -475,9 +475,13 @@
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
   // Ultimaker
-#define DEFAULT_Kp 19.30
-#define DEFAULT_Ki 1.87
-#define DEFAULT_Kd 49.77
+  #define DEFAULT_Kp 21.00
+#define DEFAULT_Ki 2.02
+#define DEFAULT_Kd 54.69
+// #define DEFAULT_Kp 19.86
+// #define DEFAULT_Ki 1.85
+// #define DEFAULT_Kd 53.21
+//Kp: 19.86 Ki: 1.85 Kd: 53.21
 
   // MakerGear
   //#define DEFAULT_Kp 7.0
@@ -526,9 +530,9 @@
 
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   //from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
-  #define DEFAULT_bedKp 10.00
-  #define DEFAULT_bedKi .023
-  #define DEFAULT_bedKd 305.4
+ #define DEFAULT_bedKp 132.87
+#define DEFAULT_bedKi 26.21
+#define DEFAULT_bedKd 449.11
 
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   //from pidautotune
@@ -727,7 +731,7 @@
  */
 #define DEFAULT_MAX_FEEDRATE          {200, 200, 12, 120}
 
-//#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
+#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
 #if ENABLED(LIMITED_MAX_FR_EDITING)
   #define MAX_FEEDRATE_EDIT_VALUES    { 600, 600, 10, 50 } // ...or, set your own edit limits
 #endif
@@ -1443,8 +1447,8 @@
 
 // Preheat Constants
 #define PREHEAT_1_LABEL       "PLA"
-#define PREHEAT_1_TEMP_HOTEND 200
-#define PREHEAT_1_TEMP_BED     50
+#define PREHEAT_1_TEMP_HOTEND 215
+#define PREHEAT_1_TEMP_BED     60
 #define PREHEAT_1_FAN_SPEED     0 // Value from 0 to 255
 
 #define PREHEAT_2_LABEL       "PETG"
